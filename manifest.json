@@ -1,0 +1,39 @@
+{
+	"manifest_version": 2,
+	"name": "get token",
+	"version": "1.0",
+	"description": "截取token，用于跨域使用",
+	"author": "ff",
+	"icons": {
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"permissions": [
+		"declarativeContent",
+		"webNavigation",
+		"tabs",
+		"notifications",
+		"http://*/",
+		"https://*/",
+		"webRequest",
+		"webRequestBlocking",
+		"storage"
+	],
+	"background": {
+		"scripts": ["js/background.js"],
+		"persistent": true
+	},
+	"browser_action": {},
+	// "web_accessible_resources": [
+	// 	"pageScripts/defaultSettings.js",
+	// 	"pageScripts/main.js",
+	// 	"iframe/index.html"
+	// ],
+	// "content_scripts": [{
+	// 	"matches": ["https://www.baidu.com/*"],
+	// 	"js": ["js/content-script.js"]
+	// }],
+	"web_accessible_resources": [
+		"inject.js"
+	]
+}
