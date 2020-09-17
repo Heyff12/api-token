@@ -1,0 +1,31 @@
+{
+	"manifest_version": 2,
+	"name": "get token",
+	"version": "1.0",
+	"description": "截取token，用于跨域使用",
+	"author": "ff",
+	"icons": {
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"permissions": [
+		"declarativeContent",
+		"webNavigation",
+		"tabs",
+		"notifications",
+		"http://*/",
+		"https://*/",
+		"webRequest",
+		"webRequestBlocking",
+		"storage",
+		"cookies"
+	],
+	"background": {
+		"scripts": ["js/background.js"],
+		"persistent": true
+	},
+	"browser_action": {
+		"default_popup": "popup.html"
+	},
+	"web_accessible_resources": []
+}
