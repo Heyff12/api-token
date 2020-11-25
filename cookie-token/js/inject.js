@@ -1,0 +1,3 @@
+let global = {
+    color: 'red'
+}

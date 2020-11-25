@@ -1,10 +1,10 @@
-const headers = ['sig','shaOne']
+const headers = ['sig', 'shaOne']
 let headersValue = []
 
 if (!headersValue.length) {
     chrome.webRequest.onBeforeSendHeaders.addListener(
         (details) => {
-            headersValue = details.requestHeaders.filter(item=>Headers.inclues(item))
+            headersValue = details.requestHeaders.filter(item => Headers.inclues(item))
         }, {
             urls: ['*://www.baidu.com/*'],
             // types:['xmlhttprequest']
